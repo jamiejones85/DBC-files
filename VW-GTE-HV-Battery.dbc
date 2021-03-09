@@ -34,58 +34,76 @@ NS_ :
 BS_: 
 BU_: 
 BO_ 460 Module8A: 8 Vector__XXX
-   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell2 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell3 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell2 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell3 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 461 Module8B: 8 Vector__XXX
-   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 462 Module8C: 8 Vector__XXX
-   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 456 Module7A: 8 Vector__XXX
-   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell2 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell3 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell2 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell3 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 457 Module7B: 8 Vector__XXX
-   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 458 Module7C: 8 Vector__XXX
-   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 452 Module6A: 8 Vector__XXX
-   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell2 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell3 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell2 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell3 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 453 Module6B: 8 Vector__XXX
-   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell5 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell6 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell7 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BO_ 454 Module6C: 8 Vector__XXX
-   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+
+BO_ 448 Module5A: 8 Vector__XXX
+   SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell2 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell3 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell4 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+
+BO_ 449 Module5B: 8 Vector__XXX
+   SG_ Cell7 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell5 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell6 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+   SG_ Cell8 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+
+BO_ 450 Module5C: 8 Vector__XXX
+   SG_ Cell9 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
    SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "" Vector__XXX
    SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "" Vector__XXX
-   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "" Vector__XXX
+   SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
 
 BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
 BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
