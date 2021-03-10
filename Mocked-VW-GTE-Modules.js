@@ -36,13 +36,13 @@ function sendVoltages(frameId, voltage) {
 
 function tick() {
 		sendVoltages(module1StartId + id, mockedCellVoltage)
-		//sendVoltages(module2StartId + id, mockedCellVoltage)
-		//sendVoltages(module3StartId + id, mockedCellVoltage)
-		//sendVoltages(module4StartId + id, mockedCellVoltage)
-		//sendVoltages(module5StartId + id, mockedCellVoltage)
-		//sendVoltages(module6StartId + id, mockedCellVoltage)
-		//sendVoltages(module7StartId + id, mockedCellVoltage)
-		//sendVoltages(module8StartId + id, mockedCellVoltage)
+		sendVoltages(module2StartId + id, mockedCellVoltage)
+		sendVoltages(module3StartId + id, mockedCellVoltage)
+		sendVoltages(module4StartId + id, mockedCellVoltage)
+		sendVoltages(module5StartId + id, mockedCellVoltage)
+		sendVoltages(module6StartId + id, mockedCellVoltage)
+		sendVoltages(module7StartId + id, mockedCellVoltage)
+		sendVoltages(module8StartId + id, mockedCellVoltage)
 
 		id = id+ 1;
   if (id > 2) {
