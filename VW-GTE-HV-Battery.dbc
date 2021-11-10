@@ -31,8 +31,8 @@ NS_ :
     BU_BO_REL_
     SG_MUL_VAL_
 
-BS_:
-BU_: HV_BATTERY_MODULES
+BS_: 
+BU_: HV_BATTERY_MODULES CONTACTOR_CONTROLLER 
 BO_ 460 Module8A: 8 HV_BATTERY_MODULES
    SG_ Cell1 : 12|12@1+ (1,1000) [0|0] "mV" Vector__XXX
    SG_ Cell2 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
@@ -176,6 +176,9 @@ BO_ 434 Module1C: 8 HV_BATTERY_MODULES
    SG_ Cell10 : 24|12@1+ (1,1000) [0|0] "mV" Vector__XXX
    SG_ Cell11 : 36|12@1+ (1,1000) [0|0] "mV" Vector__XXX
    SG_ Cell12 : 48|12@1+ (1,1000) [0|0] "mV" Vector__XXX
+
+BO_ 187 Current_Shunt: 8 CONTACTOR_CONTROLLER
+   SG_ Current : 8|16@1- (0.0025,0) [-200|200] "" CONTACTOR_CONTROLLER
 
 BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
 BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;

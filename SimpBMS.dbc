@@ -34,8 +34,9 @@ NS_ :
 BS_: 
 BU_: 
 BO_ 853 SimpBMS_SOC: 8 Vector__XXX
-   SG_ SOH : 23|16@1+ (1,0) [0|0] "%" Vector__XXX
+   SG_ SOH : 16|16@1+ (1,0) [0|0] "%" Vector__XXX
    SG_ SOC : 0|16@1+ (1,0) [0|0] "%" Vector__XXX
+   SG_ Status : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 854 SimpBMS_Status: 8 Vector__XXX
    SG_ Voltage : 0|16@1+ (0.01,0) [0|0] "V" Vector__XXX
@@ -55,14 +56,16 @@ BO_ 883 SimpBMS_High_Low: 8 Vector__XXX
    SG_ Max_temp : 48|16@1+ (1,0) [0|0] "K" Vector__XXX
 
 BO_ 849 SimpBMS_Limits: 8 Vector__XXX
-   SG_ Discharge_Current : 0|16@1+ (0.1,0) [0|0] "A" Vector__XXX
-   SG_ Discharge_Voltage : 16|16@1+ (0.1,0) [0|0] "V" Vector__XXX
-   SG_ Charge_Current : 32|16@1+ (0.1,0) [0|0] "A" Vector__XXX
-   SG_ Charge_Voltage : 48|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+   SG_ Discharge_Current : 32|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+   SG_ Discharge_Voltage : 48|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+   SG_ Charge_Current : 16|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+   SG_ Charge_Voltage : 0|16@1+ (0.1,0) [0|0] "V" Vector__XXX
 
 BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
 BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
 BA_DEF_ BO_ "isj1939dbc" INT 0 0;
+BA_ "GenMsgForegroundColor" BO_ 849 "#000000";
 BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
 BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "isj1939dbc" 0;
+VAL_ 853 Status 5 "Error" 4 "Precharge" 3 "Charge" 2 "Drive" 1 "Ready";
