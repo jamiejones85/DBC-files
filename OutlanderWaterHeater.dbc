@@ -34,10 +34,11 @@ NS_ :
 BS_: 
 BU_: 
 BO_ 920 Status: 8 Vector__XXX
-   SG_ WaterTemp : 24|8@1+ (1,0) [0|0] "" Vector__XXX
-   SG_ WaterTemp2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ InWaterTemp : 24|8@1+ (1,-50) [0|0] "" Vector__XXX
+   SG_ OutWaterTemp : 32|8@1+ (1,-50) [0|0] "" Vector__XXX
    SG_ Status : 0|8@1+ (1,0) [0|0] "" Vector__XXX
    SG_ HVStatus : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ HeaterStatus : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 392 Control: 8 Vector__XXX
 
@@ -49,3 +50,4 @@ BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "isj1939dbc" 0;
 VAL_ 920 Status 0 "Not_Ready" 1 "Ready";
 VAL_ 920 HVStatus 0 "HV_Present" 9 "No_HV";
+VAL_ 920 HeaterStatus 0 "Not_Heating" 64 "Heating";
