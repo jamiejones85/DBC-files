@@ -66,4 +66,6 @@ BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
 BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "isj1939dbc" 0;
 VAL_ 258 Protocol 1 "0.9_Chademo_Protocol";
+VAL_ 258 Faults 1 "Over_Voltage" 2 "Under_Voltage" 4 "Current_Mismatch" 8 "Over_Temperature" 22 "Charger_Stop";
+VAL_ 258 Status 1 "Charge" 2 "NotInPark" 4 "Malformed" 8 "ContactorOpen" 22 "ChargerStop";
 VAL_ 265 Status 1 "Charge" 2 "Error" 3 "ConnectorLocked" 8 "Params_Mismatch" 22 "Battery_Error" 50 "Stopped";
