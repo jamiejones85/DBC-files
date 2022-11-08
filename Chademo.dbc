@@ -40,12 +40,27 @@ BO_ 258 CARSIDE_CONTROD: 8 Vector__XXX
    SG_ Faults : 32|8@1+ (1,0) [0|0] "" Vector__XXX
    SG_ Status : 40|8@1+ (1,0) [0|0] "" Vector__XXX
    SG_ Capacity : 48|8@1+ (1,0) [0|0] "kWh" Vector__XXX
+   SG_ FaultBatteryVoltageDeviation : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultHighBatteryTemperature : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultBatteryCurrentDeviation : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultBatteryUndervoltage : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultBatteryOvervoltage : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusNormalStopRequest : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusVehicle : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusChargingSystem : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusVehicleShifterPosition : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusVehicleCharging : 40|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 256 CARSIDE_BATT: 8 Vector__XXX
    SG_ PackSize : 48|8@1+ (1,0) [0|0] "" Vector__XXX
    SG_ MaxVoltage : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ MinimumChargeCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 257 CARSIDE_CHARGETIME: 8 Vector__XXX
+   SG_ RatedBatteryCapacity : 40|16@1+ (0.11,0) [0|0] "" Vector__XXX
+   SG_ EstimatedChargingTime : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ MaxChargingTime1minBit : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ MaxChargingTime10sBit : 8|8@1+ (10,0) [0|0] "" Vector__XXX
 
 BO_ 264 EVSE_PARAMS: 0 Vector__XXX
    SG_ AvailableVoltage : 8|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -58,6 +73,14 @@ BO_ 265 EVSE_STATUS: 0 Vector__XXX
    SG_ PresentVoltage : 8|16@1+ (1,0) [0|0] "" Vector__XXX
    SG_ PresentCurrent : 24|8@1+ (1,0) [0|0] "" Vector__XXX
    SG_ Status : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusChargerStopControl : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultChargingSystemMalfunction : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultBatteryIncompatibility : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusVehicleConnectorLock : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ FaultStationMalfunction : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ StatusStation : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ RemainingChargingTime10sBit : 48|8@1+ (10,0) [0|0] "" Vector__XXX
+   SG_ RemainingChargingTime1minBit : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
 BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
@@ -65,7 +88,49 @@ BA_DEF_ BO_ "isj1939dbc" INT 0 0;
 BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
 BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
 BA_DEF_DEF_ "isj1939dbc" 0;
+CM_ SG_ 258 Capacity "Charging_rate_of_vehicle_battery";
+CM_ SG_ 258 FaultBatteryVoltageDeviation "Status_flag_indicating_whether_or_not_the_vehicle_battery_voltage_deviates_from_the_output_voltage_measured_by_the_station";
+CM_ SG_ 258 FaultHighBatteryTemperature "Status_flag_indicating_whether_or_not_the_temperature_of_vehicle_battery_exceeds_the_maximum_limit";
+CM_ SG_ 258 FaultBatteryCurrentDeviation "Status_flag_indicating_whether_or_not_the_output_current_deviates_from_EV_requested_current";
+CM_ SG_ 258 FaultBatteryUndervoltage "Status_flag_indicating_whether_or_not_the_vehicle_battery_voltage_is_less_than_the_lower_limit_specified_by_EV";
+CM_ SG_ 258 FaultBatteryOvervoltage "Status_flag_indicating_whether_or_not_the_vehicle_battery_voltage_exceeds_the_maximum_limit_specified_by_EV";
+CM_ SG_ 258 StatusNormalStopRequest "Status_flag_indicating_the_request_of_EV_to_stop_charging_control";
+CM_ SG_ 258 StatusVehicle "Status_flag_indicating_the_EV_contactor_status";
+CM_ SG_ 258 StatusChargingSystem "Status_flag_indicating_malfunction_caused_by_EV_or_the_station,_and_detected_by_EV";
+CM_ SG_ 258 StatusVehicleShifterPosition "Status_flag_indicating_the_shift_lever_position";
+CM_ SG_ 258 StatusVehicleCharging "Status_flag_indicating_charge_permission_status_of_EV";
+CM_ SG_ 257 RatedBatteryCapacity "Rated_capacity_of_battery_(Added_in_CHAdeMO1.0.1)";
+CM_ SG_ 257 EstimatedChargingTime "Estimated_remaining_time_before_the_end_of_charging_calculated_by_EV_(Added_in_CHAdeMO1.0.1)";
+CM_ SG_ 257 MaxChargingTime1minBit "Maximum_charging_time_permited_by_EV,_set_by_minute";
+CM_ SG_ 257 MaxChargingTime10sBit "Maximum_charging_time_permited_by_EV,_set_by10s";
+CM_ SG_ 264 AvailableVoltage "Maximum_output_voltage_value_at_the_vehicle_connector_terminals";
+CM_ SG_ 264 AvailableCurrent "Maximum_output_current_value_of_the_station";
+CM_ SG_ 264 ThresholdVoltage "Threshold_voltage_to_stop_the_charging_process_in_order_to_protect_vehicle_battery";
+CM_ SG_ 265 StatusChargerStopControl "Status_flag_indicating_whether_or_not_the_status_proceeds_with_shutdown_process";
+CM_ SG_ 265 FaultChargingSystemMalfunction "Status_flag_indicating_whether_or_not_there_is_a_problem_with_EV,_such_as_improper_connection";
+CM_ SG_ 265 FaultBatteryIncompatibility "Status_flag_indicating_the_compatibility_of_vehicle_battery_with_the_output_voltage_of_station";
+CM_ SG_ 265 StatusVehicleConnectorLock "Status_flag_indicating_the_electromagnetic_lock_status_of_the_vehicle";
+CM_ SG_ 265 FaultStationMalfunction "Status_flag_indicating_whether_or_not_there_is_a_malfunction_caused_by_the_station";
+CM_ SG_ 265 RemainingChargingTime10sBit "Remaining_time_before_the_end_of_charging_(counted_by_10_s)";
+CM_ SG_ 265 RemainingChargingTime1minBit "Remaining_time_before_the_end_of_charging_(counted_by_minutes)";
 VAL_ 258 Protocol 1 "0.9_Chademo_Protocol";
 VAL_ 258 Faults 1 "Over_Voltage" 2 "Under_Voltage" 4 "Current_Mismatch" 8 "Over_Temperature" 22 "Charger_Stop";
 VAL_ 258 Status 1 "Charge" 2 "NotInPark" 4 "Malformed" 8 "ContactorOpen" 22 "ChargerStop";
+VAL_ 258 FaultBatteryVoltageDeviation 0 "Normal" 1 "Fault";
+VAL_ 258 FaultHighBatteryTemperature 0 "Normal" 1 "Fault";
+VAL_ 258 FaultBatteryCurrentDeviation 0 "Normal" 1 "Fault";
+VAL_ 258 FaultBatteryUndervoltage 0 "Normal" 1 "Fault";
+VAL_ 258 FaultBatteryOvervoltage 0 "Normal" 1 "Fault" 0 "";
+VAL_ 258 StatusNormalStopRequest 0 "No_request" 1 "Request_to_Stop";
+VAL_ 258 StatusVehicle 0 "EV_contactor_closed_or_during_welding_detection" 1 "EV_contactor_open_or_welding_detection_finished";
+VAL_ 258 StatusChargingSystem 0 "Normal" 1 "Fault";
+VAL_ 258 StatusVehicleShifterPosition 0 "Parked" 1 "Other_Piosition";
+VAL_ 258 StatusVehicleCharging 0 "Disabled" 1 "Enabled";
+VAL_ 264 WeldCheckSupport 0 "Not_supported" 1 "Supporting_vehicle_welding_detection";
 VAL_ 265 Status 1 "Charge" 2 "Error" 3 "ConnectorLocked" 8 "Params_Mismatch" 22 "Battery_Error" 50 "Stopped";
+VAL_ 265 StatusChargerStopControl 0 "Operating" 1 "Shutdown_or_stop_charging";
+VAL_ 265 FaultChargingSystemMalfunction 0 "Normal" 1 "Malfunction";
+VAL_ 265 FaultBatteryIncompatibility 0 "Compatible" 1 "Not_compatible";
+VAL_ 265 StatusVehicleConnectorLock 0 "Unlocked" 1 "Locked";
+VAL_ 265 FaultStationMalfunction 0 "Normal" 1 "Fault";
+VAL_ 265 StatusStation 0 "Stand_By" 1 "Charging";

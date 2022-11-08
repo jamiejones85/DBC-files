@@ -44,10 +44,14 @@ BO_ 854 SimpBMS_Status: 8 Vector__XXX
    SG_ Temp : 32|16@1+ (0.1,0) [0|0] "C" Vector__XXX
 
 BO_ 858 SimpBMS_Warnings: 8 Vector__XXX
-   SG_ Under_Voltage : 3|1@1+ (1,0) [0|0] "" Vector__XXX
-   SG_ Over_Voltage : 4|1@1+ (1,0) [0|0] "" Vector__XXX
-   SG_ Over_Temp : 7|1@1+ (1,0) [0|0] "" Vector__XXX
-   SG_ Under_Temp : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ alarm0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ alarm1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ alarm2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ alarm3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ warn0 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ warn1 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ warn2 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ warn3 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 883 SimpBMS_High_Low: 8 Vector__XXX
    SG_ Min_Cell_Voltage : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX

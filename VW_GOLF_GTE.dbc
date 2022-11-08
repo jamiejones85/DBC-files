@@ -1,0 +1,64 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: HV_Battery_HybridCan 
+BO_ 151 BMS_Monitoring: 0 HV_Battery_HybridCan
+   SG_ BMS_EMRG_COOLING : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_STATUS_VOLTAGE_APPLIED : 61|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_STATUS_SERVICEDISCONNECT : 60|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_FUSE : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_PILOT : 58|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_COLD_START_POWER : 57|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_ISOLATION : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_POWERREDUCTION : 55|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_CONTACTOR_OPEN : 54|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_CONTACTOR_WELD : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_HV_SHUTDOWN : 52|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ERROR_HV_SHUTDOWN_REQ : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_EMRG_SHUTDOWN_PILOT : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_EMRG_SHUTDOWN_CRASH : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_INIT_COMPLETE : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_ISOLATION_MEASURE_ACTIVE : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_SLEEP_INDICATOR : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_STATUS : 36|3@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_VOLTAGE : 24|12@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BMS_CURRENT : 12|12@1+ (1,0) [0|0] "" Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "isj1939dbc" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "isj1939dbc" 0;
+CM_ BU_ HV_Battery_HybridCan "Messages coming out from nodes within the HV battery on the Hybrid Can";

@@ -16,10 +16,14 @@ function setup() {
 function sendVoltages(frameId, voltage) {
   dataBytes = [0x2C, 0,0,0,0,0,0,0]
 
+  if (frameId == 0x1B0) {
+  dataBytes[1] = ((voltage - 980 )  & 0xF) << 4
+  dataBytes[2] = (voltage - 980 ) >> 4 & 0xFF
+  } else {
   //cell 1
   dataBytes[1] = ((voltage - 1000 )  & 0xF) << 4
   dataBytes[2] = (voltage - 1000 ) >> 4 & 0xFF
-
+  }
   //cell2
   dataBytes[3] = (voltage - 1000 )  & 0xFF
   dataBytes[4] = (voltage - 1000 ) >> 8 & 0xF
