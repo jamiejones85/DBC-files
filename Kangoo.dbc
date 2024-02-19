@@ -1,0 +1,86 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: Battery 
+BO_ 341 Battery_1: 8 Battery
+   SG_ SoC : 39|16@0+ (0.0025,0) [0|0] "" Vector__XXX
+   SG_ MaxChargeAllowed : 7|8@0+ (300,0) [0|0] "W" Vector__XXX
+   SG_ Current : 11|12@0+ (0.25,-500) [0|0] "" Vector__XXX
+
+BO_ 1060 Battery_3: 8 Battery
+   SG_ SoH : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ MaxInput : 23|8@0+ (0.5,0) [0|0] "kW" Vector__XXX
+   SG_ HVBIR : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ CUV : 7|2@0+ (1,0) [0|0] "" Vector__XXX
+   SG_ HVBUV : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ EOCR : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ HVBOC : 14|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ HVBOT : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ HVBOV : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ COV : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ LowestTemperature : 39|8@0+ (1,-40) [0|0] "" Vector__XXX
+   SG_ HighestTempeature : 63|8@0+ (1,-40) [0|0] "" Vector__XXX
+   SG_ MaxOutput : 31|8@0+ (0.5,0) [0|0] "kW" Vector__XXX
+
+BO_ 1059 Battery_2: 8 Battery
+   SG_ 12V_Voltage : 63|8@0+ (0.1,0) [0|0] "V" Vector__XXX
+   SG_ ETS : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ APC : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ WUC : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ WUT : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ 12V_Voltage_regulation : 14|7@0+ (1,0) [0|0] "" Vector__XXX
+   SG_ DCDCA : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ BCBSR : 47|3@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1061 Battery_5: 8 Battery
+   SG_ RemainingkWh : 0|9@0+ (0.1,0) [0|0] "kWh" Vector__XXX
+   SG_ LowestCellVolt : 48|9@0+ (0.01,1) [0|0] "" Vector__XXX
+   SG_ HighestCellVolt : 33|9@0+ (0.01,1) [0|0] "" Vector__XXX
+   SG_ HV_Isolation_Resistance : 31|14@0+ (1,0) [0|0] "ohms" Vector__XXX
+
+BO_ 1093 Battery_6: 7 Battery
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "isj1939dbc" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "isj1939dbc" 0;
+CM_ SG_ 1060 CUV "Cell_Under_Voltage";
+CM_ SG_ 1060 HVBUV "High_Voltage_Battery_Under_Voltage";
+CM_ SG_ 1060 EOCR "End_of_Charge_Request?";
+CM_ SG_ 1060 HVBOC "High_Voltage_Battery_Over_Current";
+CM_ SG_ 1060 HVBOT "High_Voltage_Battery_Over_Temperature";
+CM_ SG_ 1060 HVBOV "High_Voltage_Battery_Over_Voltage";
+CM_ SG_ 1060 COV "Cell_Over_Voltage";
